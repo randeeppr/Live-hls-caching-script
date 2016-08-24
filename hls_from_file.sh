@@ -4,13 +4,6 @@
 #author : Randeep
 #Contact : randeep123@gmail.com
 
-#this script will be invoked by the following script.
-##!/bin/bash
-#for i in `cat hls_inputs.txt`
-#do
-#/bin/sh hls_from_file.sh $i &
-#done
-
 #creating channel directory
 if [ ! -d channels ];then
         mkdir channels
