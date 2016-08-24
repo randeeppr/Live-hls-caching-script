@@ -1,0 +1,5 @@
+http://domain.com/hls/channel1/index.m3u8
+http://domain.com/hls/channel2/index.m3u8
+http://domain.com/hls/channel3/index.m3u8
+http://domain.com/hls/channel4/index.m3u8
+http://domain.com/hls/channel5/index.m3u8
