@@ -28,13 +28,13 @@ do
         #echo -e "Baseurl is : $baseurl" #>> hls_$channelname.log
 
         #Parseing the name of the highest resolution/bitrate manifest
-        submanifestname=`cat index.m3u8 | grep 1- | tr -d '\r'`
+        submanifestname=`grep "1-" index.m3u8 | tr -d '\r'`
         suburl="$baseurl"/"$submanifestname"
         #echo -e "`date` submanifesturl is : $suburl" #>> hls_$channelname.log
 
         #Downloading the submanifest
         wget "$suburl" -o /dev/null
-        for i in `cat "$submanifestname" | grep 1-`
+        for i in `grep "1-" "$submanifestname"`
                 do
                         #echo -e "`date` $baseurl/`echo $i|tr -d '\r'`" #>> hls_$channelname.log
                         wget "$baseurl"/`echo $i|tr -d '\r'` -O /dev/null -o /dev/null
